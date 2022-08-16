@@ -7,13 +7,18 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "~46.0.3",
+    "expo": "~46.0.7",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-native": "0.69.4",
     "expo-constants": "~13.2.3",
     "@expo/vector-icons": "^13.0.0",
-    "react-native-paper": "4.9.2"
+    "react-native-paper": "4.9.2",
+    "redux": "4.2.0",
+    "react-redux": "8.0.2",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@reduxjs/toolkit": "1.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

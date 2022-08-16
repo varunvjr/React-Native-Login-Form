@@ -1,20 +1,17 @@
 import React from 'react';
 import {StyleSheet,Text, View,TextInput,TouchableOpacity,Alert} from 'react-native';
 export default class LoginForm extends React.Component{
-  
-   submitForm(){
-      Alert.alert(
-      "Login Alert",
-      "Welcome to Login Screen",
-      [
-        {
-          text: "Cancel",
-          onPress: () => console.log("Cancel Pressed"),
-          style: "cancel"
-        },
-        { text: "OK", onPress: () => console.log("You just logged IN") }
-      ]
-    );
+    constructor(props){
+      super(props);
+      this.state={
+        "username":"",
+        "password":""
+      }
+    }
+   submitForm(e){
+      e.preventDefault();
+      console.log("hello")
+     
     }
 
   render(){
@@ -23,14 +20,14 @@ export default class LoginForm extends React.Component{
       <View style={styles.loginForm}>
         <Text style={styles.header}>Login Form</Text>
         <TextInput style={styles.textInput} placeholder="Enter the Username" 
-       
-
+          value={this.state.username}
+          onChangeText={(newUser)=>this.setState({username:newUser})}
           underlineColorAndroid={'transparent'}
         />
         <TextInput style={styles.textInput} placeholder="Enter the Password"
           secureTextEntry={true}
-          
-   
+          value={this.state.password}
+          onChangeText={(newPass)=>this.setState({password:newPass})}
           underlineColorAndroid={'transparent'}
         />
         <TouchableOpacity style={styles.button}>
